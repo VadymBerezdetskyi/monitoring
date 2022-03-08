@@ -1,0 +1,5 @@
+---
+- targets:
+    - server5.mydomain.com:8888
+  labels:
+    job: cadvisor

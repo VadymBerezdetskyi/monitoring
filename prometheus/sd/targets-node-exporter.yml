@@ -1,0 +1,5 @@
+---
+- targets:
+    - server5.mydomain.com:9100
+  labels:
+    job: node-exporter
