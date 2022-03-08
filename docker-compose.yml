@@ -36,7 +36,7 @@ services:
   alertmanager:
     build:
       context: ./alertmanager
-      dockerfile: ./alertmanager/Dockerfile
+      dockerfile: Dockerfile
     container_name: alertmanager
     volumes:
       - alertmanager_data:/alertmanager
