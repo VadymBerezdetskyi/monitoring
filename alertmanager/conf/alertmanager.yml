@@ -1,14 +1,17 @@
+global:
+  slack_api_url: "${slack_api_url}"
+
 route:
-  receiver: "slack"
-  group_interval: 60s
-  repeat_interval: 168h
+  receiver: "slack-notifications"
 
 receivers:
-  - name: "slack"
+  - name: "slack-notifications"
     slack_configs:
       - send_resolved: true
+        channel: "${channel}"
         title: '{{ template "custom_title" . }}'
         text: '{{ template "custom_slack_message" . }}'
+
 templates:
   - /etc/alertmanager/notifications.tmpl
 

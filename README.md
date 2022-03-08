@@ -1,11 +1,29 @@
-## Setup env
+# Monitoring
+
+## Setup
+
+### Setup env
 
 `cp .env.dist .env`
 
-## Build alertmanager
+### Configure Caddy
 
-`cd alertmanager && docker build -t local/alertmanager .`
+`cp caddy/Caddyfile.dist caddy/Caddyfile`
 
-## Configure Caddy
+### Run
 
-edit `./caddy/Caddyfile`
+`docker-compose up -d`
+
+## Usage
+
+### Add/edit/remove prometheus rules
+
+TODO
+
+### Edit slack data
+
+TODO
+
+### Edit monitoring targets
+
+TODO
